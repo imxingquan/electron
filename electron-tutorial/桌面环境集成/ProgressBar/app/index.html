@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <title>Bookmarker</title>
+  </head>
+
+<body>
+ 
+   <h1>Hellodd from Electron</h1>
+   <p>
+       <button class="alert" id="alert">Current directory</button>
+   </p>
+<script>
+    //script 的内容放在body最后否则dom可能解析不到
+  var button = document.querySelector('.alert');
+  //const button = document.getElementById('alert');
+  button.addEventListener('click',()=> {
+    alert(__dirname);
+  });
+</script>
+</body>
+ 
+</html>

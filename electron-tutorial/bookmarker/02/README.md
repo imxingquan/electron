@@ -1,0 +1,3 @@
+./bookmarker/
+$ npm init
+$ electron .

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <title>Bookmarker</title>
+  </head>
+
+<body>
+ 
+   <h1>Hellodd from Electron</h1>
+ 
+<script>
+  const {ipcRenderer} = require('electron')
+  const updateOnlineStatus = () => {
+    ipcRenderer.send('online-status-changed', navigator.onLine ? 'online' : 'offline')
+  }
+    window.addEventListener('online',updateOnlineStatus);
+    window.addEventListener('offline',updateOnlineStatus);
+  updateOnlineStatus();
+    
+    var alertOnlineStatus = function(){
+      window.alert(navigator.onLine?'online':'offline');
+    }
+    window.addEventListener('online',alertOnlineStatus);
+    window.addEventListener('offline',alertOnlineStatus);
+
+    alertOnlineStatus();
+
+    
+</script>
+</body>
+ 
+</html>

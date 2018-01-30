@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <title>Bookmarker</title>
+  </head>
+
+<body>
+ 
+   <h1>Hellodd from Electron</h1>
+  
+<script>
+  let myNotification = new Notification('通知', {
+    body: '今天天气不错.Good Nice Day!'
+  })
+
+  myNotification.onclick = () => {
+    //dev tools output not electron console
+    console.log('I known you clicked Notification')
+  }
+
+</script>
+</body>
+ 
+</html>
